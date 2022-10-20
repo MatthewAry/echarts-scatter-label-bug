@@ -1,16 +1,6 @@
 <template>
   <v-container class="home">
-    <hello-world msg="Welcome to Your Vue.js + TypeScript App" />
-    <teleport to="head">
-      <meta
-        name="keyword"
-        content="template, typescript, vue2, vue-property-decorator, vue-class-component, vite, vite-template, composition-api, volar"
-      />
-      <meta name="description" content="Vite Vue2 TypeScript Demo" />
-      <component :is="'script'" type="application/ld+json">
-        {{ jsonLd }}
-      </component>
-    </teleport>
+    <EChart />
   </v-container>
 </template>
 
@@ -21,12 +11,14 @@ import { useRoute } from 'vue-router/composables';
 
 import HelloWorld from '@/components/HelloWorld.vue';
 import logo from '@/assets/vuetify.svg';
+import EChart from '@/components/EChart.vue'
 
 /** Home Component */
 export default defineComponent({
   /** Components */
   components: {
     HelloWorld,
+    EChart
   },
   /** Props */
   props: {
